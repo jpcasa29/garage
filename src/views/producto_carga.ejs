@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Admin | Carga producto'}) %>
+<body>
+  <!-- Navbar Gral -->
+  <%- include('partials/navbarGral') %>
+  <!-- /Navbar Gral -->
+  
+  <h4 class="titCargaProd">Carga de Nuevo Producto</h4>
+  
+  <div class="contenedorCarga">
+    <form class="form-carga" action="" method="post" enctype="multipart/form-data">
+      
+      <div class="cargaIzq">
+        <section class="cargaImgProd">
+          <img src="" alt="" />
+        </section>
+        <input
+        type="file"
+        class="form-control-file"
+        id="image"
+        name="image"
+        required="required"
+        />
+      </div>
+      
+      <div class="cargaDer">
+        <div class="formCarga required">
+          <label for="nombreProducto">Nombre Producto</label>
+          <input
+          type="text"
+          name="name"
+          class="form-control"
+          id="name"
+          aria-describedby="name"
+          placeholder="Nombre Producto"
+          required="required"
+          /><br>
+          <small class="text-danger validation-name"></small>
+        </div>        
+        
+        <div class="formCarga required">
+          <label for="anioProducto">Año Producto</label>
+          <input
+          type="text"
+          name="year"
+          class="form-control"
+          id="year"
+          aria-describedby="anio"
+          placeholder="Año Producto"
+          required="required"
+          /><br>
+          <small class="text-danger validation-year"></small>
+        </div>
+        <div class="formCarga required">
+          <label for="bodegaProducto">Bodega</label>
+          <input
+          type="text"
+          name="bodega"
+          class="form-control"
+          id="bodega"
+          aria-describedby="bodega"
+          placeholder="Bodega"
+          required="required"
+          /><br>
+          <small class="text-danger validation-bodega"></small>
+        </div>
+        <div class="formCarga required">
+          <label for="tipoProducto">Tipo Producto</label>
+          <!-- /Header 
+            <input type="text" name="tipoProducto" class="form-control" id="tipoProducto" aria-describedby="tipo">
+          -->
+          <select class="form-control" name="type" id="type" type="number">
+            <option value="3">Cerveza</option>
+            <option value="1">Vino</option>
+            <option value="4">Espumante</option>
+            <option value="2">Whisky</option>
+          </select>
+        </div>
+        <div class="formCarga required">
+          <label for="regionProducto">Región</label>
+          <select class="form-control" name="region" id="region" type="number">
+            <option value="1">Mendoza</option>
+            <option value="2">San Juan</option>
+            <option value="3">Cordoba</option>
+            <option value="4">Argentina</option>
+            <option value="5">Chile</option>
+          </select>
+          
+          <!--<input
+          type="text"
+          name="region"
+          class="form-control"
+          id="region"
+          aria-describedby="region"
+          placeholder="Región"
+          required="required"
+          />-->
+        </div>
+        <div class="formCarga required">
+          <label for="graduacionProducto">Graduación alcoholica</label>
+          <input
+          type="string"
+          min="1"
+          name="alcohol"
+          class="form-control"
+          id="alcohol"
+          aria-describedby="alcohol"
+          placeholder="Graduación alcoholica"
+          required="required"
+          />
+        </div>
+        <div class="formCarga required">
+          <label for="precioProducto">Precio</label>
+          <input
+          type="number"
+          min="1"
+          name="price"
+          class="form-control"
+          id="price"
+          aria-describedby="price"
+          placeholder="Precio"
+          required="required"
+          /><br>
+          <small class="text-danger validation-price"></small>
+        </div>
+        <div class="formCarga required">
+          <label for="descuentoProducto">Descuento</label>
+          <input
+          type="number"
+          name="discount"
+          class="form-control"
+          id="discount"
+          aria-describedby="discount"
+          placeholder="Descuento"
+          required="required"
+          />
+        </div>
+        <div class="formCarga required">
+          <label for="stockProducto">Stock</label>
+          <input
+          type="text"
+          name="stock"
+          class="form-control"
+          id="stock"
+          aria-describedby="stock"
+          placeholder="Stock"
+          required="required"
+          />
+        </div>
+        <div class="formCarga required">
+          <label for="descripcionProducto">Descripción</label>
+          <input
+          type="text"
+          name="description"
+          class="form-control"
+          id="description"
+          aria-describedby="description"
+          placeholder="Descripción"
+          required="required"
+          /> <br>
+          <small class="text-danger validation-description"></small>
+        </div>
+        <button type="submit" class="btn btn-success">
+          Agregar producto
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- footer -->
+  <%- include('partials/footer') %>
+  <!-- /footer -->
+  <script src="/js/validations-front/producto-carga.js" type="text/javascript"></script>
+</body>
+</html>

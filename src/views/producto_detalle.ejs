@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Inicio'}) %>
+<body>
+	<!-- Navbar Gral -->
+  <%- include('partials/navbarGral') %>
+  <!-- /Navbar Gral -->
+	
+	<div class="container">
+		<div class="row contProdDetalle">
+			<div class="col-12 col-md-10 col-lg-10">
+				
+				<div class="container producto-wrapper">
+					<div class="row">
+						<% for(let i = 0; i < productos.length; i++) { %>
+							<% if(productos[i].id == productoRender) { %>
+
+						<div class="col-12">
+							
+							<h4 class="titDetalleProd"><a href="/">Inicio</a> / <a href="/">Categoría</a> / <%= productos[i].name %></h4>
+						</div>
+						<div class="producto-detalle col-12">
+							<div class="row">
+								<div class="col-12 col-md-7 col-lg-7">
+									<img src="/images/products/<%= productos[i].image %>" alt="">
+									<span>Descripción del producto</span>
+									<p class="descripcionProducto col-12" ><%= productos[i].description %></p>
+								</div>
+								
+								<div class="col-12 col-md-5 col-lg-5">
+									<h3><%= productos[i].name %></h3>
+									<h3>$ <%= productos[i].price %></h3>
+									<form class="juan" action="/cart/add" method="post">
+										<input type="hidden" value="<%= productos[i].id %>" name="id_producto">
+										<label for="cantidad">Cantidad</label>
+										<input type="number" name="cantidad" value="1">
+										<button type="submit" class="btn btn-primary btn-lg">Agregar al carrito</button>
+									</form>
+									<br>
+									<span>Fecha Producto</span>
+									<h5>Fecha producto</h5>
+									<span>Bodega</span>
+									<h5><%= productos[i].bodega %></h5>
+									<span>Tipo/Categoria</span>
+									<h5><%= productos[i].types.name %></h5>
+									<span>Región</span>
+									<h5><%= productos[i].regions.name %></h5>
+									<span>Graduación Alcoholica</span>
+									<h5><%= productos[i].alcohol %></h5>
+									<br>
+									
+								</div>
+								
+							</div>
+						</div>
+						<% } %>
+						<% } %>
+					</div>
+				</div>
+				
+				<div>
+					<h4 class="productos-similares">Productos similares</h4>
+					<div class="container">
+						<div class="row">
+							<% let productosArray = [] %> 
+							<% for (let i = 0; i < 4; i++) {
+								let numeroRandom = Math.floor(Math.random() * productos.length)
+								productosArray.push(numeroRandom)
+								
+							} %> 
+							<% for(let i=0; i< 4; i++) { %>
+								<div class="col-12 col-md-6 col-xl-3">
+									<section class="productos">
+										<a href="/producto/detalle/<%= productos[productosArray[i]].id %>">
+											<figure class="">
+												<img class="img-fluid" src="/images/products/<%= productos[productosArray[i]].image %>"
+												alt="<%= productos[productosArray[i]].name %>"
+												/>
+											</figure>
+										</a>
+										
+										<article >
+											<a href="/producto/detalle/<%= productos[productosArray[i]].id %>" class="producto">
+												<h3 class="nombre-producto"><%= productos[productosArray[i]].name %></h3>
+											</a>
+											<div >
+												<a href="/producto/detalle/<%= productos[productosArray[i]].id %>" class="extras-producto">
+													<h4>$ <%= productos[productosArray[i]].price %></h4>
+													<span><%= productos[productosArray[i]].discount %> % OFF</span>
+												</a>
+											</div>
+										</article>
+										
+										
+										<form class="juan" action="/cart/add" method="post">
+											<input type="hidden" value="<%= productos[productosArray[i]].id %>" name="id_producto">
+											<label type="hidden"></label>
+											<input type="hidden" name="cantidad" value="1">
+											<button type="submit" class="btn btn-primary btn-lg btn-block">
+											Agregar al carrito
+										  </button>
+										  </form>
+									</section>
+								</div>
+								<% } %>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br><br>
+		<!-- footer -->
+		<%- include('partials/footer') %>
+		<!-- /footer -->
+	</body>	
+	</html>

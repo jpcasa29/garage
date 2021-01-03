@@ -1,0 +1,36 @@
+h3.adminProd {
+    margin-top: 15vh; 
+    text-align: center;
+}
+
+div.contenedorAdmin {
+    justify-content: center;
+}
+
+.card-margin {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+    h3.adminProd {
+        margin-top: 20vh;       
+    }
+
+    div.contenedorAdmin {
+        margin-bottom: 10vh;
+    }
+}
+
+@media (min-width: 1100px) {
+    h3.adminProd {
+        margin-top: 18vh;
+    }
+
+    div.contenedorAdmin {
+        margin-bottom: 20vh;
+    }
+
+    div.card {
+        width: 280px;
+    }
+}

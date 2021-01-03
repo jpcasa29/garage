@@ -1,0 +1,82 @@
+<header class="header">
+  <div class="navbar-gral">
+    <nav class="navbar"> 
+      
+      <!-- Dropdown Mobile & Logo-->
+      <div class="container-logo">
+        <a href="/" class="">
+          <img class="logo2" src="/images/Logo1.png" />
+        </a>        
+        
+        <div class="dropdown menu-mobile">
+          <a class="btn dropdown-toggle button-menu" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </a>
+          <div class="dropdown-menu menu-desplegado" aria-labelledby="dropdownMenuButton">
+            <div class="buscador">
+              <input type="text" class="input-buscador" placeholder="¿Qué buscas?">
+              <button type="submit" class="button-buscador"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/filtro/1">Vinos</a>
+            <a class="dropdown-item" href="/filtro/4">Espumantes</a>
+            <a class="dropdown-item" href="/filtro/2">Whiskies</a>
+            
+          </div>
+        </div>
+        <div class="btn-group dropleft user-mobile">
+          <a class="btn btn-sm dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
+          <div class="dropdown-menu">
+            <% if(typeof localUser == "undefined") { %>
+              <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
+              <a class="dropdown-item" href="/users/login"> Ingresar</a>
+              <input type="hidden" name="locaUser" id="locaUser" value="NO">
+            <% } else { %>
+              <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/account/<%=(localUser ? localUser.id :":id" )%>">Tu cuenta</a>
+              <input type="hidden" name="locaUser" id="locaUser" value="<%=(localUser ? localUser.id :":id" )%>">
+            <% } %>
+          </div>
+        </div>         
+      </div> 
+
+      <!-- Tablet & escritorio-->
+      <nav class="navegador">
+        <ul class="navegador-central dif-colors">
+          <li><a href="/filtro/1">Vinos</a></li>
+          <li><a href="/filtro/4">Espumantes</a></li>
+          <li><a href="/filtro/1">Whiskies</a></li>
+          
+        </ul>
+
+        <ul class="navegador-derecha">
+          
+          <li>
+            <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
+          </li>
+          <li class="dropdown">
+            <a class="btn btn-sm dropdown-toggle dropdown-toggle-split" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <% if(typeof localUser == "undefined") { %>
+                <a class="dropdown-item" href="/users/register"> Registrate</a> <!-- Deberia dejar verse al estar logueado-->
+                <a class="dropdown-item" href="/users/login"> Ingresar</a>
+                <input type="hidden" name="locaUser" id="locaUser" value="NO">
+              <% } else { %>
+                <a class="dropdown-item" href="/exit"> Logout</a> <!-- Deberia verse solo estando logueado-->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/users/account/<%=(localUser ? localUser.id :":id" )%>">Tu cuenta</a>
+                <input type="hidden" name="locaUser" id="locaUser" value="<%=(localUser ? localUser.id :":id" )%>">
+              <% } %>
+            </div>
+          </li>
+          <li>
+            <% if(typeof localAdmin !== "undefined") { %>
+              <a href="/admin/index"><i class="fas fa-edit"></i></a>
+            <% } %>
+          </li>
+        </ul>
+      </nav> 
+    </nav>
+  </div>
+</header>

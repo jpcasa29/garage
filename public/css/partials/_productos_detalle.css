@@ -1,0 +1,127 @@
+/* Productos */
+.contProdDetalle {
+    display: flex;
+    justify-content: center;
+}
+
+.producto-wrapper {    
+    margin-bottom: 15px;
+}
+
+.productos-similares{
+    margin: 10px 0;
+}
+
+.producto-detalle {
+    background-color: #ffffff;
+    border-radius: 5px;
+    align-items: center;
+}
+
+div.producto-detalle div.row div img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}  
+
+
+p.descripcionProducto {
+    font-size: 14px;
+}
+
+h4.titDetalleProd {
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+div.producto-detalle div.row div h3 {
+    font-size: 26px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+div.producto-detalle div.row div form input {
+    width: 50px;
+    text-align: center;
+    margin-left: 2%;
+}
+
+div.producto-detalle div.row div form button {
+    display: block;
+    margin-top: 3%;
+}
+
+
+.contProdSimilar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.prodSimilar {
+    width: 60%;
+    margin-bottom: 10px;
+    
+}
+
+/*====== Media-Queries ======*/
+@media (min-width: 768px) and (max-width: 1099px) {
+    
+    div.producto-detalle div.row div img {
+        width: 70%;
+    } 
+    
+    h4.titDetalleProd {
+        text-align: left;
+        margin-top: 20vh;
+        margin-bottom: 4vh;
+        margin-left: 5vw;
+        font-size: 18px;
+    }
+
+    .contProdSimilar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .prodSimilar {
+        width: 15%;
+        display: inline-flex;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+}
+
+@media (min-width: 1100px) {    
+    div.producto-detalle div.row div img {
+        width: 70%;
+    } 
+
+    h4.titDetalleProd {
+        text-align: left;
+        margin-top: 15vh;
+        margin-bottom: 4vh;
+        margin-left: 5vw;
+        font-size: 20px;
+    }
+
+    .contProdSimilar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prodSimilar {
+        width: 18%;
+        display: inline-flex;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

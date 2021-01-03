@@ -1,0 +1,28 @@
+div.inicio-sesion {
+    margin-top: 25%;
+}
+
+div.inicio-sesion h2{
+    padding: 0;
+}
+
+.btnLogin {
+    margin-bottom: 10%;
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+    div.inicio-sesion { 
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 1100px) {
+    div.inicio-sesion { 
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+    
+}

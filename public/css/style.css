@@ -1,0 +1,48 @@
+/*====== Fonts ======*/
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap'); /*cursiva*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400&display=swap');
+
+
+/* antiguas
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap'); */
+
+/*====== Variables ======*/
+@import 'partials/_variables.css';
+
+/*====== Home ======*/
+@import 'partials/_home.css';
+
+/*====== Header + NavBar principal del Home ======*/
+@import 'partials/_headerNavbar.css';
+
+/*====== Main-Footer ======*/
+@import 'partials/_footer.css';
+
+/*====== Navbar gral para el resto de views ======*/
+@import 'partials/_navbarGral.css';
+
+/*====== Administración de Productos ======*/
+@import 'partials/_productos_admin.css';
+
+/*====== Carga de Productos ======*/
+@import 'partials/_productos_carga.css';
+
+/*====== Registro usuario ======*/
+@import 'partials/_registroUsuario.css';
+
+/*====== Login usuario ======*/
+@import 'partials/_login.css';
+
+
+/*====== Productos Detalle ======*/
+@import 'partials/_productos_detalle.css';
+
+/*====== Carrito de compras ======*/
+@import 'partials/_carrito.css';

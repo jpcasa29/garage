@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Admin de productos'}) %>
+<body>
+	<!-- Navbar Gral -->
+  <%- include('partials/navbarGral') %>
+  <!-- /Navbar Gral -->
+
+
+  <h3 class="adminProd">Administración de Productos</h3>
+
+  <div class="contenedorAdmin">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 w-75 card-margin">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cargar Nuevo Producto</h5>
+              <p class="card-text">Aquí podrás cargar un nuevo producto</p>
+              <a href="producto/carga" class="btn btn-primary">CARGAR</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 w-75 card-margin">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Modificar Productos</h5>
+              <p class="card-text">Aquí podrás modificar los productos</p>
+              <a href="productos" class="btn btn-primary">MODIFICAR</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 w-75 card-margin">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Recuperar Productos</h5>
+              <p class="card-text">Podrás recuperar productos eliminados</p>
+              <a href="producto/eliminados" class="btn btn-primary">VER</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

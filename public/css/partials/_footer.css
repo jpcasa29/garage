@@ -1,0 +1,139 @@
+.main-footer {
+  color: var(--white);
+  font-size: 14px;
+  background-color: var(--footer);
+  font-family: var(--base-font-family);
+}
+
+article.footer-data h4.footer-titles {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 0;
+} 
+
+article.footer-data{
+  text-align: center;
+}
+
+ul.info-links li{
+  padding: 5px;
+}
+
+ul.info-links li a:hover{
+  text-decoration: none;
+  color: var(--light-blue);
+}
+
+article.footer-redes {
+  display: flex;
+  justify-content: center;
+}
+
+article.footer-redes a.redes {
+  font-size: 20px;
+  margin: 0px 5px;
+}
+
+article.footer-redes a.redes:hover {
+  text-decoration: none;
+  color: var(--light-blue);
+}
+
+form.form-newsletter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input.input-newsletter {
+  width: 75%;
+  padding: 5px 5px;
+  margin: 3px 5px;
+}
+
+button.button-newsletter {
+  width: 45%;
+  padding: 0px 10px;
+  font-size: 15px;
+}
+
+.main-footer .container-fluid p {
+  font-family: var(--cursiva);
+  font-size: 20px;
+  text-align: center;  
+}
+
+/*====== Media-Queries ======*/
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .main-footer {
+    color: var(--white);
+    font-size: 15px;  
+    background-color: var(--footer);
+    font-family: var(--base-font-family);
+  }
+  
+  .main-footer .container-fluid p {
+    font-family: var(--cursiva);
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  footer.main-footer div {
+    padding-top: 10px;
+  }
+  
+  article.footer-data {
+    align-items: center;
+    text-align: center;
+  }
+  
+  article.footer-data h4 {
+    font-size: 20px;
+  } 
+
+  article.footer-redes a.redes {
+    font-size: 25px;
+  }
+
+  input.input-newsletter {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+
+@media (min-width: 1100px) {
+  .main-footer {
+    color: var(--white);
+    font-size: 15px;  
+    background-color: var(--footer);
+    font-family: var(--base-font-family);
+  }
+  
+  .main-footer .container-fluid p {
+    font-family: var(--cursiva);
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  footer.main-footer div {
+    padding-top: 10px;
+  }
+  
+  article.footer-data {
+    align-items: center;
+    text-align: center;
+  }
+  
+  article.footer-data h4 {
+    font-size: 20px;
+  } 
+
+  article.footer-redes a.redes {
+    font-size: 25px;
+  }
+}
